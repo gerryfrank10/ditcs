@@ -1,7 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import matplotlib.pyplot as plt
+from rest_framework import viewsets
 import io, base64
+from rest_framework import viewsets
+from .models import Traffic, Road, Light
+from .serializers import TrafficSerializer, RoadSerializer, LightSerializer
 
 # Create your views here.
 def index(request):
@@ -32,3 +36,15 @@ def camera(request):
 
 def profile(request):
     return render(request, 'profile.html')
+
+class TrafficViewSet(viewsets.ModelViewSet):
+    queryset = Traffic.objects.all()
+    serializer_class = TrafficSerializer
+
+class RoadViewSet(viewsets.ModelViewSet):
+    queryset = Road.objects.all()
+    serializer_class = RoadSerializer
+
+class LightViewSet(viewsets.ModelViewSet):
+    queryset = Light.objects.all()
+    serializer_class = LightSerializer
