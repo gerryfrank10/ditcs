@@ -16,3 +16,5 @@ class LightAdmin(admin.ModelAdmin):
 class RoadAdmin(admin.ModelAdmin):
     list_display = ('name', 'distance', 'status')
     list_filter = ('distance','status')
+
+    
