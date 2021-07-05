@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Traffic, Light, Road
-from .reports import MyReport
+#from .reports import MyReport
 
 @admin.register(Traffic)
 class TrafficAdmin(admin.ModelAdmin):

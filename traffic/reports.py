@@ -1,4 +1,4 @@
-from reports.base import ModelReport
+# from reports.base import ModelReport
 
-class MyReport(ModelReport):
-    name = "Report -- My Report"
+# class MyReport(ModelReport):
+#     name = "Report -- My Report"
